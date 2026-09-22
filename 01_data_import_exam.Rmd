@@ -9,6 +9,7 @@ The file is for data import.
 ```{r}
 library(tidyverse)
 library(readxl)
+library(haven)
 ```
 import first dataset
 
@@ -87,6 +88,18 @@ tt_df
 
 ```
 
+Import SAS
+
+read in the PLUSE dataset
+
+```{r}
+pulse_df = 
+  read_sas("data/public_pulse_data.sas7bdat")
+
+
+pulse_df = janitor::clean_names(pulse_df)
+
+```
 
 
 
