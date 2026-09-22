@@ -1,0 +1,12 @@
+---
+title: "Data import"
+output: github_document
+---
+
+The file is for data import.
+
+
+```{r}
+library(tidyverse)
+```
+
