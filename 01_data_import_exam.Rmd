@@ -27,7 +27,7 @@ pups_df =
   read_csv(
     file = "data/FAS_pups.csv",
     skip = 3,
-    na = C("","NA","."))
+    na = c("","NA","."))
 
 pups_df = janitor::clean_names(pups_df)
 ```
@@ -102,5 +102,18 @@ pulse_df = janitor::clean_names(pulse_df)
 ```
 
 
+## 
+
+Import pups with `read.csv()`
+
+```{r}
+pups_df_base = 
+  read.csv("data/FAS_pups.csv")
+
+pups_df_base
+
+```
+
+won't show: lazy about varailbe names; super slow for big fataset.
 
 
