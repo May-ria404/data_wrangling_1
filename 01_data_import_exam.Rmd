@@ -13,7 +13,8 @@ import first dataset
 
 ```{r}
 litters_df = 
-  read_csv(file = "data/FAS_litters.csv")
+  read_csv(file = "data/FAS_litters.csv",
+           na = c("","NA","."))
 
 litters_df = janitor::clean_names(litters_df)
 ```
@@ -21,7 +22,10 @@ Import second dataset
 
 ```{r}
 pups_df = 
-  read_csv(file = "data/FAS_pups.csv",skip = 3)
+  read_csv(
+    file = "data/FAS_pups.csv",
+    skip = 3,
+    na = C("","NA","."))
 
 pups_df = janitor::clean_names(pups_df)
 ```
@@ -51,11 +55,9 @@ skimming??
 skimr::skim(pups_df)
 ```
 
-Viewing??
 
-```{r}
-view(pups_df)
-```
+
+## 0h excel ...
 
 
 
